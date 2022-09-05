@@ -11,6 +11,11 @@ const HomeStyle = styled.div`
     transform: translate(-50%, -35%);
     min-width:  540px;
     height: 608px;
+
+
+    @media (min-width: 375px) and (max-width : 768px) {
+      min-width:  343px;
+    }
 `
 
 

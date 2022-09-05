@@ -12,12 +12,22 @@ const GenerateButtonStyle = styled.div`
     align-items: center;
     cursor: pointer;
 
+    @media (min-width: 375px) and (max-width : 768px) {
+            height: 56px;
+      }
+
     p {
         color: #24232C;
         font-size: 18px;
         line-height: 24px;
         font-weight: 700;
         margin-right: 24px;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+          font-size: 16px;
+          line-height: 21px;
+          margin-right: 16px;
+      }
     }
 `
 

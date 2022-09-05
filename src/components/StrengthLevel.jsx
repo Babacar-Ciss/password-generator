@@ -13,12 +13,23 @@ const StrengthLevelStyle = styled.div`
     align-items: center;
     margin-bottom: 32px;
 
+    @media (min-width: 375px) and (max-width : 768px) {
+        height: 56px;
+        padding : 17px 16px 18px 16px;
+        margin-bottom: 16px;
+    }
+
 
     h1 {
         color: #817D92;
         font-size: 18px;
         line-height: 24px;
         font-weight: 700;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+            font-size : 16px;
+            line-height: 21px;
+        }
     }
 
     .level-container {
@@ -27,6 +38,11 @@ const StrengthLevelStyle = styled.div`
         line-height: 32px;
         display: flex;
         align-items: center;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+            font-size : 18px;
+            line-height: 24px;
+        }
     
         p {
             margin-right: 16px;

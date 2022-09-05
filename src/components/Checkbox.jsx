@@ -9,21 +9,22 @@ const CheckBoxStyle = styled.div`
     display: flex;
     margin-bottom: 19px;
 
+    @media (min-width: 375px) and (max-width : 768px) {
+        margin-bottom: 16px;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
 
     .container {
      position: relative;
-     /* padding-left: 35px;
-     margin-bottom: 12px; */
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
+     cursor: pointer;
+     font-size: 22px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
 
     input[type=checkbox] {
         position: absolute;
@@ -81,6 +82,11 @@ const CheckBoxStyle = styled.div`
         line-height: 24px;
         font-weight: 700;
         margin-left: 44px ;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+        font-size: 16px;
+        line-height: 21px;
+        }
     }
 `
 let count = 0;

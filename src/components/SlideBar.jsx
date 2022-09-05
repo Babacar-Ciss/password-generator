@@ -11,12 +11,21 @@ const SlideBarStyle = styled.div`
         align-items: center;
         justify-content: space-between;
         margin-bottom: 25px;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+            margin-bottom: 14px;
+        }
     
         p {
             font-weight: 700;
             font-size: 18px;
             line-height: 24px;
             color: #E6E5EA;
+
+            @media (min-width: 375px) and (max-width : 768px) {
+            font-size: 16px;
+            line-height: 21px;
+            }
         }
 
         h2 {
@@ -24,13 +33,20 @@ const SlideBarStyle = styled.div`
             font-size: 32px;
             line-height: 42px;
             font-weight: 700;
+
+            @media (min-width: 375px) and (max-width : 768px) {
+            font-size: 24px;
+            line-height: 32px;
+            }
         }
     }
 
     input[type=range] {
         width: 100%;
+        -webkit-appearance : none;
         background: transparent;
     
+        // FireFox
     &::-moz-range-thumb {
         width: 28px;
         height: 28px;
@@ -59,6 +75,25 @@ const SlideBarStyle = styled.div`
         background: #A4FFAF;
         height: 8px;
     }
+
+    // Chrome
+    &::-webkit-slider-thumb  {
+        -webkit-appearance : none;
+        transform: translateY(-10px);
+        width: 28px;
+        height: 28px;
+        border: none;
+        border-radius: 50%;
+        background: #E6E5EA;
+        cursor: grab;
+    }
+
+    &::-webkit-slider-runnable-track {
+        height: 8px;
+        background-color: #18171F;
+    }
+
+
   }
 `
 

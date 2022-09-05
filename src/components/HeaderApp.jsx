@@ -15,11 +15,22 @@ const HeaderAppStyle = styled.div`
         line-height: 32px;
         text-align: center;
         margin-bottom: 31px;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom: 16px;
+        }
+
     }
 
     .Password-view {
         position: relative;
         margin-bottom: 24px;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+            margin-bottom: 16px;
+        }
 
         input {
         color: #E6E5EA;
@@ -32,7 +43,14 @@ const HeaderAppStyle = styled.div`
         font-size: 32px;
         line-height: 42px;
         padding : 19px 0 19px 32px;
-        
+
+        @media (min-width: 375px) and (max-width : 768px) {
+            height: 64px;
+            font-size: 24px;
+            line-height: 32px;
+            padding : 17px 0 15px 16px;
+        }
+
         &::placeholder {
         color: #E6E5EA;
         opacity: 0.25;
@@ -45,9 +63,14 @@ const HeaderAppStyle = styled.div`
         font-size: 32px;
         line-height: 42px;
         padding : 19px 0 19px 32px;
+
+        @media (min-width: 375px) and (max-width : 768px) {
+            height: 64px;
+            font-size: 24px;
+            line-height: 32px;
+            padding : 17px 0 15px 16px;
         }
-
-
+        }
 
         &:focus {
             outline: none;
@@ -61,12 +84,28 @@ const HeaderAppStyle = styled.div`
             right: 32px;
             display: flex;
 
+            @media (min-width: 375px) and (max-width : 768px) {
+                top: 22px;
+                right: 22px;
+            }
+
+            img {
+                    @media (min-width: 375px) and (max-width : 768px) {
+                        width: 17.5px;
+                        height: 20px;
+                    }
+            }
+
             span {
                 color: #A4FFAF;
                 margin-right: 16px;
                 font-size: 18px;
                 line-height: 24px;
                 font-weight: 700;
+
+                @media (min-width: 375px) and (max-width : 768px) {
+                        font-size: 16px;
+                }
             }
 
             img:hover {
@@ -74,10 +113,7 @@ const HeaderAppStyle = styled.div`
                 filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7491%) hue-rotate(330deg) brightness(102%) contrast(101%);
             }
         }
-        
     }
-
-
 `
 
 export default function HeaderApp() {
@@ -98,7 +134,6 @@ export default function HeaderApp() {
                      alt="copy logo" 
                      onClick = {() => {
                         setIsCopied(true)
-                        // navigator.clipboard.write(generatePassword);
                         console.log(navigator.clipboard.writeText(generatePassword));
                         }}/>
             </label>
